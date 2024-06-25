@@ -8,7 +8,7 @@ export class CalculatorService {
     if (string.includes(',')) {
       const numbers = string.split(',');
       const sum = Number(numbers[0]) + Number(numbers[1]);
-      return sum;  
+      return sum;
     }
     if (isNaN(Number(string))) throw new Error('The string is not a number');
     return Number(string);
