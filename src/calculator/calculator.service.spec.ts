@@ -23,4 +23,12 @@ describe('CalculatorService', () => {
   it('should return number when the string is a number', () => {
     expect(service.sum('3')).toBe(3);
   });
+
+  it('should return number when the string is a number', () => {
+    expect(service.sum('4')).toBe(4);
+  });
+
+  it('should return the same number when the string is a number', () => {
+    expect(service.sum('5')).not.toBe(6);
+  });
 });
