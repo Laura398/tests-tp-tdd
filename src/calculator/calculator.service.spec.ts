@@ -12,10 +12,6 @@ describe('CalculatorService', () => {
     service = module.get<CalculatorService>(CalculatorService);
   });
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
-  });
-
   // Test1
   it('should return 0 when the string is empty', () => {
     expect(service.add('')).toBe(0);
@@ -89,5 +85,15 @@ describe('CalculatorService', () => {
   // Test15
   it('should throw an error when separators are not separated by a number', () => {
     expect(() => service.add('2,\n3')).toThrow();
+  });
+
+  // Test16
+  it('should throw an error when separators are not separated by a number', () => {
+    expect(() => service.add('2,3,9\n')).toThrow();
+  });
+
+  // Test17
+  it('should throw an error when separators are not separated by a number', () => {
+    expect(() => service.add('\n6,9,1')).toThrow();
   });
 });
