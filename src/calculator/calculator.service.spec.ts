@@ -109,6 +109,11 @@ describe('CalculatorService', () => {
 
   // Test 20
   it('should accept custom separator', () => {
-    expect(service.add('//;\n1;2;3;4')).not.toBe(12);
+    expect(service.add('//sep\n1sep2sep3sep4')).not.toBe(12);
+  });
+
+  // Test 21
+  it('should throw an error when separators are not separated by the same separator', () => {
+    expect(() => service.add('//;\n1;2sep4')).toThrow();
   });
 });
