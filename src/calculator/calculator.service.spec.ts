@@ -15,4 +15,8 @@ describe('CalculatorService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  it('should return 0 when the string is empty', () => {
+    expect(service.sum('')).toBe(0);
+  });
 });
