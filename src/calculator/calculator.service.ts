@@ -6,6 +6,15 @@ export class CalculatorService {
   add(string: string): number {
     console.log('string', string);
     if (string === '') return 0;
+    if (string.startsWith("//")){
+      const firstPart = string.split('//')[1];
+      const stringArray = firstPart.split('\n');
+      const delimiter = stringArray[0];
+      const stringToUse = stringArray[1];
+      const numbersAsStrings = stringToUse.split(delimiter);
+      return sumNumbers(numbersAsStrings.map((numberAsString) => Number(numberAsString)));
+    }
+
     if (string.includes(',') || string.includes('\n')) {
       const numbersAsStrings = string.split(/,|\n/, );
       const numbers = numbersAsStrings.map((numberAsString) => {
