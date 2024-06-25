@@ -7,7 +7,7 @@ export class CalculatorService {
     console.log('string', string);
     if (string === '') return 0;
     if (string.includes(',') || string.includes('\n')) {
-      const numbersAsStrings = string.split(/,|\n/);
+      const numbersAsStrings = string.split(/,|\n/, );
       const numbers = numbersAsStrings.map((numberAsString) => {
         if (numberAsString === '')
           throw new Error('The string is not well formatted');

@@ -96,4 +96,9 @@ describe('CalculatorService', () => {
   it('should throw an error when separators are not separated by a number', () => {
     expect(() => service.add('\n6,9,1')).toThrow();
   });
+
+  // Test 18
+  it('should accept custom separator', () => {
+    expect(service.add('//;\n1;2')).toBe(3);
+  });
 });
