@@ -65,4 +65,14 @@ describe('CalculatorService', () => {
   it('should return an error when one of the numbers is not a number', () => {
     expect(() => service.sum('2,a')).toThrow();
   });
+
+  // Test11
+  it('should return sum of many numbers', () => {
+    expect(service.sum('1,2,3,4,5')).toBe(15);
+  });
+
+  // Test12
+  it('should return sum of many numbers', () => {
+    expect(service.sum('5,5,5')).toBe(15);
+  });
 });
