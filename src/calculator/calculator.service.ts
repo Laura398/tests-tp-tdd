@@ -8,6 +8,6 @@ export class CalculatorService {
     if (!number1 || (number1 === '' && !number2)) {
       return 0;
     }
-    return 1;
+    return;
   }
 }
