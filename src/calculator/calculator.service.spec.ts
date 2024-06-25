@@ -19,4 +19,8 @@ describe('CalculatorService', () => {
   it('should return 0 when the string is empty', () => {
     expect(service.sum('')).toBe(0);
   });
+
+  it('should return number when the string is a number', () => {
+    expect(service.sum('3')).toBe(3);
+  });
 });
