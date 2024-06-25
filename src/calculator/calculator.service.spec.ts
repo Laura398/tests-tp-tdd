@@ -80,4 +80,14 @@ describe('CalculatorService', () => {
   it('should accept new line as a separator', () => {
     expect(service.add('1\n2,3')).toBe(6);
   });
+
+  // Test14
+  it('should accept new line as a separator', () => {
+    expect(service.add('1\n2\n3')).toBe(6);
+  });
+
+  // Test15
+  it('should throw an error when separators are not separated by a number', () => {
+    expect(() => service.add('2,\n3')).toThrow();
+  });
 });
