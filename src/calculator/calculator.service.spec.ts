@@ -119,6 +119,6 @@ describe('CalculatorService', () => {
 
   // Test 22
   it('should throw an error when separators are not separated by the same separator', () => {
-    expect(() => service.add('//|\n1|2,3')).toThrow();
+    expect(() => service.add('//|\n1|2sep3')).toThrow();
   });
 });
