@@ -5,6 +5,11 @@ export class CalculatorService {
   sum(string: string): number {
     console.log('string', string);
     if (string === '') return 0;
+    if (string.includes(',')) {
+      const numbers = string.split(',');
+      const sum = Number(numbers[0]) + Number(numbers[1]);
+      return sum;  
+    }
     if (isNaN(Number(string))) throw new Error('The string is not a number');
     return Number(string);
   }

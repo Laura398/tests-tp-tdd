@@ -37,6 +37,6 @@ describe('CalculatorService', () => {
   });
 
   it('should return sum of two numbers', () => {
-    expect(service.sum('1,2')).toBe(3);
+    expect(service.sum('4,2')).toBe(6);
   })
 });
