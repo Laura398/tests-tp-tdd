@@ -19,6 +19,4 @@ export class CalculatorService {
     if (isNaN(Number(string))) throw new Error('The string is not a number');
     return Number(string);
   }
-
-
 }

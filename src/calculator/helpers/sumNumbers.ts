@@ -1,3 +1,6 @@
 export function sumNumbers(numbers: number[]) {
-    return numbers.reduce((acc, number) => acc + number, 0);
+  numbers.forEach((number) => {
+    if (isNaN(number)) throw new Error('One of the numbers is not a number');
+  });
+  return numbers.reduce((acc, number) => acc + number, 0);
 }

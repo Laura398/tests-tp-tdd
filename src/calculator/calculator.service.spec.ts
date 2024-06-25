@@ -57,14 +57,14 @@ describe('CalculatorService', () => {
   });
 
   // Test9
-  // it('should return an error when one of the numbers is not a number', () => {
-  //   expect(() => service.sum('a,2')).toThrow();
-  // });
+  it('should return an error when one of the numbers is not a number', () => {
+    expect(() => service.sum('a,2')).toThrow();
+  });
 
-  // // Test10
-  // it('should return an error when one of the numbers is not a number', () => {
-  //   expect(() => service.sum('2,a')).toThrow();
-  // });
+  // Test10
+  it('should return an error when one of the numbers is not a number', () => {
+    expect(() => service.sum('2,a')).toThrow();
+  });
 
   // Test11
   it('should return sum of many numbers', () => {
