@@ -39,4 +39,12 @@ describe('CalculatorService', () => {
   it('should return sum of two numbers', () => {
     expect(service.sum('4,2')).toBe(6);
   })
+
+  it('should return sum of two numbers', () => {
+    expect(service.sum('9,3')).toBe(12);
+  })
+
+  it('should return sum of two numbers', () => {
+    expect(service.sum('5,2')).not.toBe(10);
+  })
 });
