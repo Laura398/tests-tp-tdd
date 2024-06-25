@@ -1,5 +1,7 @@
 
-# TD Tests TDD - Master 2 Groupe A Dev Web - Benoît Belloc et Laura Mathieu
+# TD Tests TDD
+# Master 2 Groupe A Dev Web
+# Benoît Belloc et Laura Mathieu
 
 This project is the result of the exercise "Kata 2 – String calculator" from this website : https://tddmanifesto.com/exercises/.
 
