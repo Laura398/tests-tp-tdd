@@ -35,4 +35,8 @@ describe('CalculatorService', () => {
   it('should return an error when the string is not a number', () => {
     expect(() => service.sum('a')).toThrow();
   });
+
+  it('should return sum of two numbers', () => {
+    expect(service.sum('1,2')).toBe(3);
+  })
 });
