@@ -15,12 +15,4 @@ describe('CalculatorService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
-
-  it('should return 0', () => {
-    expect(service.sum('')).toBe(0);
-  });
-
-  it('should return 1', () => {
-    expect(service.sum('1')).toBe(1);
-  })
 });

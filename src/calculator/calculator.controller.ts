@@ -6,7 +6,7 @@ export class CalculatorController {
   constructor(private readonly calculatorService: CalculatorService) {}
 
   @Post()
-  sum(@Body() number1: string, number2?: string) {
-    return this.calculatorService.sum(number1, number2);
+  sum(@Body() string: string) {
+    return this.calculatorService.sum(string);
   }
 }
